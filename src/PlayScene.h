@@ -33,6 +33,9 @@ private:
 
 	// Pathfinding functions and objects
 	void m_buildGrid();
+	void m_computeTileCost();
+
+
 	void m_setGridEnabled(bool state);
 	std::vector<Tile*> m_pGrid;
 	
