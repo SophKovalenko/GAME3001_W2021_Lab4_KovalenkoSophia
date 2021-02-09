@@ -84,6 +84,7 @@ void PlayScene::GUI_Function()
 	//ImGui::ShowDemoWindow();
 	
 	ImGui::Begin("GAME3001 - Lab 4", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
+	
 
 	static bool isGridEnabled = false;
 	if(ImGui::Checkbox("Grid Enabled", &isGridEnabled))
@@ -99,8 +100,9 @@ void PlayScene::GUI_Function()
 	{
 		if (targetPosition[1] > Config::ROW_NUM - 1)
 		{
-			targetPosition[1] > Config::ROW_NUM - 1;
+			targetPosition[1] = Config::ROW_NUM - 1;
 		}
+
 		SDL_RenderClear(Renderer::Instance()->getRenderer());
 		m_pTarget->setGridPosition(targetPosition[0], targetPosition[1]);
 		m_pTarget->getTransform()->position = m_getTile(targetPosition[0], targetPosition[1])->getTransform()->position + offset;
