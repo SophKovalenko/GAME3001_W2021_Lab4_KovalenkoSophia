@@ -36,6 +36,8 @@ private:
 	void m_setGridEnabled(bool state);
 	std::vector<Tile*> m_pGrid;
 	
+	// convienience functions
+	Tile* m_getTile(int col, int row);
 };
 
 #endif /* defined (__PLAY_SCENE__) */
