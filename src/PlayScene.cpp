@@ -184,6 +184,7 @@ void PlayScene::m_setGridEnabled(bool state)
 	for (auto tile : m_pGrid)
 	{
 		tile->setEnabled(state);
+		tile->setLabelsEnabled(state);
 	}
 
 	if(state == false)
